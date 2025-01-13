@@ -1,0 +1,23 @@
+@use "./helpers" as *;
+
+:root {
+  // Container
+  --container: #{rem(1210)};
+  --container-padding-x: #{rem(15)};
+
+  // Fonts
+  // --font-primary: "Roboto", sans-serif;
+
+  // Base colors
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-accent: #188734;
+
+  // Text colors
+  --tc-primary: #163a24;
+  --tc-light: #fafafa;
+
+  // Background
+  --bgc-primary: #fff;
+  --bgc-secondary: #163a24;
+}

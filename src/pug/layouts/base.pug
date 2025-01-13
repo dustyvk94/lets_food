@@ -1,0 +1,39 @@
+include ../mixins
+
+block variables
+  - var pageTitle;
+  - var pageDescription;
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title= pageTitle
+    meta(name="description" content= pageDescription)
+
+    //- Favicon
+    //- +favicon
+
+    //- Preload large files
+    //- link(rel='preload' fetchpriority='high' as='image' href='images/backgrounds/hero_bg.webp' type='image/webp')
+
+    //- Preload fonts
+    //- +fontPreload("Roboto", "Roboto-Regular")
+
+    block styles
+      link(rel="stylesheet" href="css/index.css")
+
+    block scripts
+      script(src="js/index.bundle.js" defer)
+
+  body.page
+    //- Header
+    //- include ../../components/header/header
+
+    //- Content
+    block content
+
+    //- Footer
+    //- include ../../components/footer/footer

@@ -1,0 +1,63 @@
+/* stylelint-disable scss/at-rule-conditional-no-parentheses */
+/* stylelint-disable media-feature-range-notation */
+
+@use "./functions" as *;
+
+$laptop: 1199.98;
+$tablet-big: 991.98;
+$tablet: 767.98;
+$mobile: 640.98;
+$mobile-m: 567.98;
+$mobile-s: 475.98;
+
+@mixin laptop {
+  @media (max-width: em($laptop)) {
+    @content;
+  }
+}
+
+@mixin tablet-big {
+  @media (max-width: em($tablet-big)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: em($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: em($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-medium {
+  @media (max-width: em($mobile-m)) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (max-width: em($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}

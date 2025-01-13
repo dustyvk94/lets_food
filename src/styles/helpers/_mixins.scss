@@ -1,0 +1,24 @@
+@use "sass:math";
+@use "functions" as *;
+
+// Для использования настроить в _functions.scss размер ширины контейнера страницы
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min);
+}
+
+@mixin fontsWoff2($folder, $fullName, $weight, $style: normal) {
+  @font-face {
+    src: url("../fonts/#{$folder}/#{$fullName}.woff2") format("woff2");
+    font-family: $folder;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin focus {
+  &:focus-visible {
+    outline: 2px dashed var(--color-accent);
+    outline-offset: 2px;
+  }
+}

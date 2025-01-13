@@ -1,0 +1,10 @@
+@use "./helpers" as *;
+
+.heading {
+  @include fluid-text(48, 38);
+
+  margin: 0;
+  font-family: var(--font-secondary, #188734);
+  font-weight: 600;
+  line-height: 1.12;
+}
