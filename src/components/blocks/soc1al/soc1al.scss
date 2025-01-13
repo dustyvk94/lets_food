@@ -1,0 +1,35 @@
+@use "../../../styles/helpers" as *;
+
+.soc1al {
+  @extend %list-reset;
+
+  display: flex;
+  gap: rem(24);
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: rem(48);
+    height: rem(48);
+    box-shadow: var(--box-shadow-social);
+    text-decoration: none;
+    background-color: var(--color-light);
+    transition: background-color 0.3s ease-out;
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    &:focus-visible {
+      outline: rem(2) solid var(--tc-dark);
+      outline-offset: rem(2);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__icon {
+    fill: var(--tc-dark);
+  }
+}

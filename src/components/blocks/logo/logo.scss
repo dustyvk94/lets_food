@@ -1,0 +1,15 @@
+@use "../../../styles/helpers" as *;
+
+.logo {
+  display: inline-flex;
+  align-items: end;
+  text-decoration: none;
+  gap: rem(4);
+
+  &__caption {
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: normal;
+    color: var(--tc-dark);
+  }
+}
