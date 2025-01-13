@@ -1,0 +1,46 @@
+/* stylelint-disable declaration-block-no-shorthand-property-overrides */
+/* stylelint-disable order/properties-order */
+
+@use "../../../styles/helpers" as *;
+
+.banner {
+  padding-block: rem(40) rem(80);
+
+  &__body {
+    @extend %flex-center;
+
+    overflow: hidden;
+    border-radius: rem(10);
+    min-height: rem(332);
+    background-image: url("../images/backgrounds/banner-bg.jpg");
+    background: linear-gradient(0deg, rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+      image-set(
+        url("../images/backgrounds/banner-bg.avif") type("image/avif") 1x,
+        url("../images/backgrounds/banner-bg@2x.avif") type("image/avif") 2x,
+        url("../images/backgrounds/banner-bg.webp") type("image/webp") 1x,
+        url("../images/backgrounds/banner-bg@2x.webp") type("image/webp") 2x,
+        url("../images/backgrounds/banner-bg.jpg") 1x,
+        url("../images/backgrounds/banner-bg@2x.jpg") 2x
+      );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    @extend %flex-center;
+
+    flex-direction: column;
+    max-width: rem(542);
+    min-height: rem(332);
+    text-align: center;
+    padding-block: rem(60);
+  }
+
+  &__title {
+    margin: 0 0 rem(30);
+    font-weight: 700;
+    font-size: rem(32);
+    color: var(--color-light);
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../../styles/helpers" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: rem(50);
+  padding: rem(12) rem(22);
+  min-width: rem(122);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: 1;
+  text-decoration: none;
+  color: var(--tc-dark);
+  transition: background-color 0.3s ease;
+  gap: rem(16);
+
+  &--primary {
+    background-color: var(--color-accent);
+
+    @include hover {
+      background-color: #ebb93c;
+    }
+
+    &:active {
+      background-color: #d3a737;
+    }
+
+    &:focus-visible {
+      outline: rem(2) solid var(--tc-dark);
+      outline-offset: rem(2);
+      background-color: #ebb93c;
+    }
+  }
+
+  &:disabled {
+    border-color: #c2c0c0;
+    background-color: #c2c0c0;
+    pointer-events: none;
+  }
+
+  &__icon {
+    fill: currentcolor;
+  }
+}

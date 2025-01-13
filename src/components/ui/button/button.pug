@@ -1,0 +1,10 @@
+mixin button(className="primary", text, type="button", href, target="_blank")
+  if (type === "button" || type === "submit")
+    button(class=`button button--${className}` type=type)&attributes(attributes)
+      span.button__text= text
+      block
+  
+  if type === "link"
+    a(class=`button button--${className}` href=href target=target)&attributes(attributes)
+      span.button__text= text
+      block
