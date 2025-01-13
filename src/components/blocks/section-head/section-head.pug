@@ -1,0 +1,7 @@
+mixin sectionHead(centering, title, subtitle, description)
+  div(class=`${centering === "left" ? "section-head section-head--leveling-left" : "section-head"}`)
+    h2.section-head__title.heading= title
+    h3.section-head__subtitle.subheading= subtitle
+
+    if (description)
+      p.section-head__description.description= description

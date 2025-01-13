@@ -1,0 +1,23 @@
+@use "../../../styles/helpers" as *;
+
+.section-head {
+  text-align: center;
+
+  &--leveling-left {
+    text-align: left;
+  }
+
+  &__title,
+  &__subtitle,
+  &__description {
+    text-align: inherit;
+  }
+
+  &__title {
+    margin-bottom: rem(7);
+  }
+
+  &__description {
+    margin-top: rem(26);
+  }
+}
