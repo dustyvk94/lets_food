@@ -7,9 +7,8 @@
   gap: rem(24);
 
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
+
     border-radius: 50%;
     width: rem(48);
     height: rem(48);
