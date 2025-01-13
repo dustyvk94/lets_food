@@ -1,9 +1,13 @@
-@forward "./ui/button/button";
+@forward "./ui/buttons/button";
+@forward "./ui/buttons/button-favorite";
+
+@forward "./blocks/cards/card-product";
 
 @forward "./blocks/logo/logo";
 @forward "./blocks/section-head/section-head";
 @forward "./blocks/soc1al/soc1al";
 @forward "./blocks/advantages/advantages";
+@forward "./blocks/menu/menu";
 @forward "./blocks/banner/banner";
 @forward "./blocks/footer/footer";
 @forward "./blocks/footer/footer-group";
