@@ -6,7 +6,6 @@ import gulpIf from 'gulp-if'
 import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
-import gcmq from 'gulp-group-css-media-queries'
 import csso from 'gulp-csso'
 
 const sass = gulpSass(dartSass)
@@ -19,7 +18,6 @@ const scss = () => {
     .pipe(plumber(showNotify('SCSS')))
     .pipe(sass())
     .pipe(autoprefixer(app.autoprefixer))
-    .pipe(gcmq())
     .pipe(dest(paths.scss.dest, { sourcemaps: app.isDev }))
     .pipe(gulpIf(app.isProd, rename({ suffix: '.min' })))
     .pipe(gulpIf(app.isProd, csso()))
