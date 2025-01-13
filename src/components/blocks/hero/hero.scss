@@ -1,0 +1,69 @@
+@use "../../../styles/helpers" as *;
+
+.hero {
+  min-height: rem(600);
+  background-image: url("../images/shapes/wavy-line.svg"),
+    url("../images/shapes/wavy-line.svg");
+  background-position: left 0 bottom rem(36), left 0 bottom rem(73);
+  background-size: rem(179) rem(37);
+  background-repeat: no-repeat;
+  background-color: var(--bgc-accent);
+
+  &__container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: rem(530) rem(560);
+  }
+
+  &__content {
+    align-self: center;
+  }
+
+  &__title {
+    @include fluid-text(48, 28);
+
+    margin: 0 0 rem(20);
+    font-weight: 600;
+    line-height: 1.2;
+
+    span {
+      color: var(--color-accent);
+    }
+  }
+
+  &__description {
+    margin: 0 0 rem(22);
+    color: var(--tc-light);
+  }
+
+  &__images {
+    position: relative;
+    height: rem(589);
+    background-image: url("../images/shapes/ellipse.svg"),
+      url("../images/shapes/ellipse.svg"), url("../images/shapes/ellipse.svg"),
+      url("../images/shapes/ellipse.svg");
+    background-position: left rem(76) top rem(52), left rem(120) top rem(250),
+      right 0 top rem(250), left 0 bottom rem(97);
+    background-size: rem(54), rem(19), rem(74), rem(41);
+    background-repeat: no-repeat;
+  }
+
+  &__image {
+    position: absolute;
+
+    &--big {
+      right: rem(53);
+      top: rem(12);
+    }
+
+    &--medium {
+      right: rem(-16);
+      bottom: 0;
+    }
+
+    &--small {
+      left: rem(76);
+      bottom: rem(97);
+    }
+  }
+}
