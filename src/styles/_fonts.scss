@@ -1,3 +1,6 @@
 @use "./helpers/mixins";
 
-// @include mixins.fontsWoff2("Roboto", "Roboto-Regular", 400);
+@include font.fontsWoff2("ReadexPro", "ReadexPro-Regular", 400);
+@include font.fontsWoff2("ReadexPro", "ReadexPro-Medium", 500);
+@include font.fontsWoff2("ReadexPro", "ReadexPro-SemiBold", 600);
+@include font.fontsWoff2("ReadexPro", "ReadexPro-Bold", 700);

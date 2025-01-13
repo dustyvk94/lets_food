@@ -1,10 +1,29 @@
 @use "./helpers" as *;
 
 .heading {
-  @include fluid-text(48, 38);
+  margin: 0;
+  font-family: var(--color-accent);
+  font-weight: 500;
+  font-size: rem(22);
+  line-height: 1.12;
+  text-align: center;
+}
+
+.subheading {
+  @include fluid-text(32, 24);
 
   margin: 0;
-  font-family: var(--font-secondary, #188734);
-  font-weight: 600;
-  line-height: 1.12;
+  font-weight: 700;
+  text-align: center;
+  color: var(--tc-primary);
+}
+
+.description {
+  @include fluid-text(22, 18);
+
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: var(--tc-light);
 }
