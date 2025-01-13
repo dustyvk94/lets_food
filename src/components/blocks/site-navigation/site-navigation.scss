@@ -1,0 +1,54 @@
+@use "../../../styles/helpers" as *;
+
+.site-navigation {
+  &__list {
+    @extend %list-reset;
+
+    display: flex;
+    column-gap: rem(36);
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: rem(22);
+    text-decoration: none;
+    color: var(--tc-light);
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--tc-dark);
+    }
+
+    &:active {
+      color: var(--tc-light);
+    }
+
+    &:focus-visible {
+      outline: rem(2) solid var(--tc-dark);
+      outline-offset: rem(6);
+      color: var(--tc-dark);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: rem(-6);
+      outline: none;
+      border-radius: rem(4);
+      width: 100%;
+      height: rem(3);
+      background-color: transparent;
+    }
+
+    &--current {
+      color: var(--tc-dark);
+
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

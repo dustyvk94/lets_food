@@ -1,0 +1,34 @@
+@use "../../../styles/helpers" as *;
+
+.shopping-cart-button {
+  position: relative;
+  width: fit-content;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    &:focus-visible {
+      outline: rem(2) solid var(--tc-dark);
+      outline-offset: rem(4);
+    }
+  }
+
+  &__count {
+    position: absolute;
+    right: rem(-4);
+    top: rem(-3);
+    border-radius: 50%;
+    padding: rem(2);
+    height: rem(13);
+    min-width: rem(13);
+    font-weight: 500;
+    font-size: rem(9);
+    line-height: 1;
+    text-align: center;
+    color: var(--tc-dark);
+    background-color: var(--color-accent);
+  }
+}

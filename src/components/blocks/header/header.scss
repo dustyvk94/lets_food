@@ -1,0 +1,26 @@
+@use "../../../styles/helpers" as *;
+
+.header {
+  background-color: var(--bgc-accent);
+  padding-block: rem(34);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__user-actions,
+  &__action-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-actions {
+    gap: rem(28);
+  }
+
+  &__action-icons {
+    gap: rem(32);
+  }
+}

@@ -15,6 +15,7 @@
   text-decoration: none;
   color: var(--tc-dark);
   transition: background-color 0.3s ease;
+  cursor: pointer;
   gap: rem(16);
 
   &--primary {

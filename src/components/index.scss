@@ -3,7 +3,13 @@
 
 @forward "./blocks/cards/card-product";
 
+@forward "./features/search-field/search-field";
+@forward "./blocks/shopping-cart/shopping-cart-button";
+
 @forward "./blocks/logo/logo";
+@forward "./blocks/site-navigation/site-navigation";
+
+@forward "./blocks/header/header";
 @forward "./blocks/hero/hero";
 @forward "./blocks/section-head/section-head";
 @forward "./blocks/soc1al/soc1al";

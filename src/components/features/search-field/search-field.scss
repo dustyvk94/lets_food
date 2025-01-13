@@ -1,0 +1,40 @@
+@use "../../../styles/helpers" as *;
+
+.search-field {
+  position: relative;
+  width: fit-content;
+  height: rem(24);
+
+  &__input {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    border: rem(1) solid var(--color-dark);
+    padding: rem(5) rem(10);
+    max-width: rem(200);
+    font: inherit;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-width 0.3s, opacity 0.3s, padding 0.3s;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 0;
+    background: none;
+
+    &:focus-visible {
+      outline: rem(2) solid var(--tc-primary);
+      outline-offset: rem(2);
+    }
+  }
+
+  &__button-icon {
+    vertical-align: baseline;
+  }
+}
