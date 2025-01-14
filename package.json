@@ -52,6 +52,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "sanitize.css": "^13.0.0"
+    "fslightbox": "^3.4.2",
+    "sanitize.css": "^13.0.0",
+    "swiper": "^11.2.1"
   }
 }

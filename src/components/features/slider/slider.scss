@@ -1,0 +1,17 @@
+@use "../../../styles/helpers" as *;
+
+.swiper {
+  max-width: rem(920);
+
+  &-wrapper {
+    padding-bottom: 46px;
+  }
+
+  &-slide {
+    max-width: rem(452);
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--color-accent);
+  }
+}

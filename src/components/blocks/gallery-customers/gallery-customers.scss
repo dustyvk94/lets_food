@@ -1,0 +1,17 @@
+@use "../../../styles/helpers" as *;
+
+.gallery-customers {
+  overflow-x: hidden;
+  padding-block: rem(20) rem(40);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-left: calc((100% - rem(1150)) / 2);
+    gap: rem(100);
+  }
+
+  &__gallery {
+    padding-left: rem(70);
+  }
+}

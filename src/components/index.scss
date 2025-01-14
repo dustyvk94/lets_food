@@ -2,8 +2,10 @@
 @forward "./ui/buttons/button-favorite";
 
 @forward "./blocks/cards/card-product";
+@forward "./blocks/cards/card-review";
 
 @forward "./features/search-field/search-field";
+@forward "./features/slider/slider";
 @forward "./blocks/shopping-cart/shopping-cart-button";
 
 @forward "./blocks/logo/logo";
@@ -15,6 +17,9 @@
 @forward "./blocks/soc1al/soc1al";
 @forward "./blocks/advantages/advantages";
 @forward "./blocks/menu/menu";
+@forward "./blocks/gallery/gallery";
+@forward "./blocks/customers/customers";
+@forward "./blocks/gallery-customers/gallery-customers";
 @forward "./blocks/banner/banner";
 @forward "./blocks/footer/footer";
 @forward "./blocks/footer/footer-group";
