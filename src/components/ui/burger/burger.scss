@@ -1,0 +1,14 @@
+@use "../../../styles/helpers" as *;
+
+.burger {
+  position: relative;
+  display: none;
+  border: none;
+  padding: rem(4);
+  background: none;
+  cursor: pointer;
+
+  @include tablet-big {
+    display: block;
+  }
+}

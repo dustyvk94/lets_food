@@ -6,6 +6,10 @@
   display: flex;
   gap: rem(24);
 
+  @include tablet {
+    justify-content: center;
+  }
+
   &__link {
     @extend %flex-center;
 

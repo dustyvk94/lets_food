@@ -17,9 +17,22 @@
     @extend %list-reset;
 
     display: grid;
-    grid-template-columns: repeat(4, rem(280));
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: rem(70);
     gap: rem(24);
+
+    @include tablet-big {
+      justify-content: center;
+      grid-template-columns: repeat(2, minmax(rem(200), rem(280)));
+    }
+
+    @include mobile-medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list-item {
+    justify-self: center;
   }
 
   &__action {

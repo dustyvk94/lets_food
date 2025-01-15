@@ -12,11 +12,23 @@ section.advantages
 
     ul.advantages__list
       li.advantages__item.advantages__item--order
+        picture.advantages__image
+          source(srcset="images/advantages/order.avif 1x, images/advantages/order@2x.avif 2x" type="image/avif")
+          source(srcset="images/advantages/order.webp 1x, images/advantages/order@2x.webp 2x" type="image/webp")
+          img(src="images/advantages/order.jpg" srcset="images/advantages/order@2x.jpg 2x" width="180" height="180" alt="" aria-hidden="true" loading="lazy")
         h3.advantages__subtitle Easy To Order
         p.advantages__description You only order through the app
       li.advantages__item.advantages__item--delivery
+        picture.advantages__image
+          source(srcset="images/advantages/delivery.avif 1x, images/advantages/delivery@2x.avif 2x" type="image/avif")
+          source(srcset="images/advantages/delivery.webp 1x, images/advantages/delivery@2x.webp 2x" type="image/webp")
+          img(src="images/advantages/delivery.jpg" srcset="images/advantages/delivery@2x.jpg 2x" width="180" height="180" alt="" aria-hidden="true" loading="lazy")
         h3.advantages__subtitle Fastest Delivery
         p.advantages__description Delivery will be on time
       li.advantages__item.advantages__item--quality
+        picture.advantages__image
+          source(srcset="images/advantages/courier.avif 1x, images/advantages/courier@2x.avif 2x" type="image/avif")
+          source(srcset="images/advantages/courier.webp 1x, images/advantages/courier@2x.webp 2x" type="image/webp")
+          img(src="images/advantages/courier.jpg" srcset="images/advantages/courier@2x.jpg 2x" width="180" height="180" alt="" aria-hidden="true" loading="lazy")
         h3.advantages__subtitle Best Quality
         p.advantages__description The best quality of food for you

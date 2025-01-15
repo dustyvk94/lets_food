@@ -1,14 +1,33 @@
+/* stylelint-disable declaration-no-important */
+
 @use "../../../styles/helpers" as *;
 
 .swiper {
-  max-width: rem(920);
+  @include tablet-big-above {
+    max-width: rem(670);
+  }
 
   &-wrapper {
     padding-bottom: 46px;
   }
 
   &-slide {
-    max-width: rem(452);
+    @include tablet-big-above {
+      max-width: rem(452);
+    }
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @include tablet-big-above {
+      max-width: 452px;
+    }
+
+    @include tablet-big {
+      max-width: 100%;
+    }
   }
 
   .swiper-pagination-bullet.swiper-pagination-bullet-active {

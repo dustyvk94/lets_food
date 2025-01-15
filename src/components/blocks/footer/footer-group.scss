@@ -17,6 +17,10 @@
       z-index: -1;
       border-radius: 50%;
       background-color: #ffac4b;
+
+      @include mobile-medium {
+        content: none;
+      }
     }
 
     &:nth-child(1)::before {

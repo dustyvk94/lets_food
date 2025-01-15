@@ -1,17 +1,35 @@
 @use "../../../styles/helpers" as *;
 
 .gallery-customers {
-  overflow-x: hidden;
   padding-block: rem(20) rem(40);
 
   &__container {
-    display: flex;
-    align-items: center;
-    padding-left: calc((100% - rem(1150)) / 2);
-    gap: rem(100);
+    @include tablet-big-above {
+      display: flex;
+      align-items: center;
+      padding-left: calc((100% - rem(1150)) / 2);
+      max-width: initial;
+      gap: rem(40);
+      margin-inline: initial;
+    }
+
+    @include laptop-big-above {
+      gap: rem(100);
+    }
   }
 
   &__gallery {
-    padding-left: rem(70);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @include tablet-big-above {
+      margin-bottom: 0;
+      padding-left: rem(15);
+    }
+
+    @include laptop-big-above {
+      padding-left: rem(70);
+    }
   }
 }

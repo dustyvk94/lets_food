@@ -36,6 +36,16 @@
     }
   }
 
+  &--login {
+    @include mobile-medium {
+      min-width: auto;
+
+      .button__icon {
+        display: none;
+      }
+    }
+  }
+
   &:disabled {
     border-color: #c2c0c0;
     background-color: #c2c0c0;

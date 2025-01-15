@@ -19,5 +19,9 @@
 
   &__description {
     margin-top: rem(26);
+
+    @include tablet-big {
+      margin-top: rem(20);
+    }
   }
 }

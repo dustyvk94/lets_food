@@ -5,29 +5,19 @@
   flex-direction: column;
   border-radius: rem(10);
   height: 100%;
-  max-width: rem(280);
   box-shadow: var(--box-shadow-card);
   background-color: #f1f1f1;
 
   &__image-box {
+    @extend %flex-center;
+
+    flex: 1 1 auto;
     padding: rem(13) rem(25) rem(16);
-  }
-
-  &__image {
-    display: block;
-    width: rem(230);
-    height: rem(230);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 
   &__content {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0;
     flex-direction: column;
     border-radius: 60% 60% rem(10) rem(10) / 22% 22% rem(10) rem(10);
     padding: rem(14) rem(22);

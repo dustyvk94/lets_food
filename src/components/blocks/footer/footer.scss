@@ -5,13 +5,29 @@
 
   &__top {
     display: flex;
-    column-gap: rem(76);
     align-items: start;
+    gap: rem(76);
     padding-block: rem(84) rem(90);
+
+    @include tablet-big {
+      gap: rem(60);
+      padding-block: rem(70) rem(50);
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      padding-top: rem(40);
+    }
   }
 
   &__info {
     max-width: rem(324);
+
+    @include tablet {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   &__logo {
@@ -25,10 +41,26 @@
     color: var(--tc-light);
   }
 
+  &__group {
+    flex-grow: 1;
+
+    @include tablet {
+      width: 90%;
+    }
+
+    @include mobile-medium {
+      width: 100%;
+    }
+  }
+
   &__bottom {
     border-top: rem(1) solid rgba(29, 29, 29, 0.5);
     text-align: center;
     padding-block: rem(45) rem(46);
+
+    @include tablet-big {
+      padding-block: rem(29) rem(30);
+    }
   }
 
   &__copy {

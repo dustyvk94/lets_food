@@ -1,6 +1,22 @@
+@use "../../../styles/helpers" as *;
+
 .customers {
   &__head {
-    margin-bottom: 32px;
-    max-width: 480px;
+    margin-bottom: rem(32);
+    max-width: rem(480);
+
+    @include tablet-big {
+      max-width: 100%;
+
+      .section-head {
+        text-align: center;
+      }
+    }
+  }
+
+  &__slider {
+    @include tablet-big-above {
+      padding-left: var(--container-padding-x);
+    }
   }
 }

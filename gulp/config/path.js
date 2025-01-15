@@ -13,7 +13,7 @@ const paths = {
 
   pug: {
     src: `${sourseFolder}/pages/*.pug`,
-    watch: [`${sourseFolder}/pug/**/*.pug`, `${sourseFolder}/components/**/*.pug`],
+    watch: `${sourseFolder}/**/*.pug`,
     dest: `${buildFolder}`,
   },
 
