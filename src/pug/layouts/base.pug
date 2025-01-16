@@ -14,13 +14,16 @@ html(lang="en")
     meta(name="description" content= pageDescription)
 
     //- Favicon
-    //- +favicon
+    +favicon
 
     //- Preload large files
-    //- link(rel='preload' fetchpriority='high' as='image' href='images/backgrounds/hero_bg.webp' type='image/webp')
+    link(rel='preload' fetchpriority='high' as='image' href='images/hero/food-1.avif' type='image/avif')
+    link(rel='preload' fetchpriority='high' as='image' href='images/hero/food-2.avif' type='image/avif')
+    link(rel='preload' fetchpriority='high' as='image' href='images/hero/food-3.avif' type='image/webp')
 
     //- Preload fonts
-    //- +fontPreload("Roboto", "Roboto-Regular")
+    +fontPreload("ReadexPro", "ReadexPro-Regular")
+    +fontPreload("ReadexPro", "ReadexPro-SemiBold")
 
     block styles
       link(rel="stylesheet" href="css/index.css")

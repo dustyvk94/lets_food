@@ -29,6 +29,10 @@ const navigationWrapper = document.querySelector('.header__navigation')
 const navigation = document.querySelector('.site-navigation')
 const navigationLinks = document.querySelectorAll('.site-navigation__link')
 
+const media = window.matchMedia('(width < 991px)')
+
+media.addEventListener('change', e => updateNavigation(e))
+
 burger.addEventListener('click', openNavigationMenu)
 closeNavigation.addEventListener('click', closeNavigationMenu)
 navigationWrapper.addEventListener('click', event => {
@@ -43,14 +47,18 @@ navigationLinks.forEach(link => {
 
 function openNavigationMenu() {
   navigationWrapper.classList.add('isShow')
-  navigation.setAttribute('aria-hidden', 'true')
   burger.setAttribute('aria-expanded', 'true')
   document.documentElement.classList.add('disabled-scroll')
 }
 
 function closeNavigationMenu() {
   navigationWrapper.classList.remove('isShow')
-  navigation.setAttribute('aria-hidden', 'false')
   burger.setAttribute('aria-expanded', 'false')
   document.documentElement.classList.remove('disabled-scroll')
+}
+
+function updateNavigation(e) {
+  const isMobile = e.matches
+
+  isMobile ? navigation.setAttribute('inert', '') : navigation.removeAttribute('inert')
 }

@@ -10,6 +10,13 @@
   background-color: transparent;
   cursor: pointer;
 
+  @include hover {
+    .favorite__icon {
+      fill: var(--color-accent);
+      fill-opacity: 1;
+    }
+  }
+
   &:focus-visible {
     outline: rem(2) solid var(--tc-dark);
     outline-offset: rem(2);
@@ -30,5 +37,6 @@
   &__icon {
     fill: var(--tc-dark);
     fill-opacity: 0.7;
+    transition: all 0.2s ease;
   }
 }
