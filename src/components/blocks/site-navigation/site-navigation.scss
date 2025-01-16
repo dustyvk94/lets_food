@@ -79,6 +79,10 @@
 
       &::after {
         background-color: var(--color-accent);
+
+        @include tablet-big {
+          content: none;
+        }
       }
     }
   }
